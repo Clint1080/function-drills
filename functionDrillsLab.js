@@ -65,8 +65,18 @@ console.log(sum)
 */
 
 //CODE HERE
-
-
+function nameCheck(name1) {
+  if(name1 === `Steven`) {
+    // return "what is up Steven"
+    console.log(`What is up Steven`);
+  } else if (name1 === `Bryan`){
+    console.log(`Hey Bryan!`);
+  } else {
+    // return (`Cool name, ${name1}`);
+    console.log(`Cool name ${name1}`)
+  }
+}
+nameCheck(`Clint`)
 ////////////////// PROBLEM 6 ////////////////////
 /*
   Write a function called faveColorFinder that takes in one parameter called color (which will be a string).
