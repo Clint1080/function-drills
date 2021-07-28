@@ -65,6 +65,7 @@ console.log(sum)
 */
 
 //CODE HERE
+
 function nameCheck(name1) {
   if(name1 === `Steven`) {
     // return "what is up Steven"
@@ -77,6 +78,7 @@ function nameCheck(name1) {
   }
 }
 nameCheck(`Clint`)
+
 ////////////////// PROBLEM 6 ////////////////////
 /*
   Write a function called faveColorFinder that takes in one parameter called color (which will be a string).
@@ -89,6 +91,18 @@ nameCheck(`Clint`)
 
 //CODE HERE
 
+function faveColorFinder(color){
+  if(color === `red`){
+    console.log(`red is a great color`)
+  } else if ( color === `green`){
+    console.log(`green is a solid favorite color`)
+  } else if (color === `black`) {
+    console.log(`so trendy`)
+  } else {
+    console.log(`you need to evaluate your favorite color choice`)
+  }
+}
+faveColorFinder(`green`);
 
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
