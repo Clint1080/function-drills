@@ -5,7 +5,10 @@
 */
 
 //CODE HERE
-
+function helloWorld(){
+  console.log(`Hello world`);
+}
+helloWorld();
 
 ////////////////// PROBLEM 2 ////////////////////
 /*
