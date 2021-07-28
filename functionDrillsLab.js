@@ -65,19 +65,19 @@ console.log(sum)
 */
 
 //CODE HERE
+let nameGreeting = nameCheck(`Steven`)
 
 function nameCheck(name1) {
   if(name1 === `Steven`) {
-    // return "what is up Steven"
-    console.log(`What is up Steven`);
+    return `What is up Steven`
   } else if (name1 === `Bryan`){
-    console.log(`Hey Bryan!`);
+    return `Hey Bryan!`
   } else {
-    // return (`Cool name, ${name1}`);
-    console.log(`Cool name ${name1}`)
+    return (`Cool name, ${name1}`);
   }
 }
-nameCheck(`Clint`)
+
+console.log(nameGreeting)
 
 ////////////////// PROBLEM 6 ////////////////////
 /*
@@ -180,7 +180,9 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
+function theEliminator(contestants, losers){
 
+}
 
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo."
