@@ -142,6 +142,7 @@ if(num % 2 === 0) {
 
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
+let bigOrSmallArray2 = [2, 4, 5502, 222, 405, 2, 10, 33]
 /* 
   Create a function called 'bigOrSmall' that takes in one parameter, 'arr',  which will be an array of numbers. 
   Inside of the bigOrSmall function, create a new array called 'answers'. 
@@ -152,7 +153,23 @@ let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
 */
 
 //CODE HERE
+let arrayEvaluator = bigOrSmall(bigOrSmallArray)
+let arrayEvaluator2 = bigOrSmall(bigOrSmallArray2)
 
+function bigOrSmall(arr){
+  let answers = []
+  for(let i = 0; i < bigOrSmallArray.length; i++) {
+    if(bigOrSmallArray[i] > 100){
+      answers.push('big')
+    } else {
+      answers.push('small')
+    }
+  }
+  return answers
+  // console.log(answers)
+}
+console.log(arrayEvaluator)
+console.log(arrayEvaluator2)
 
 ////////////////// PROBLEM 10 ////////////////////
 let contestants = ['Katniss', 'Peeta', 'Fox-face', 'Glimmer', 'Cato', 'Rue', 'Thresh', 'Clove', 'Marvel']
