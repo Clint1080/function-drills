@@ -34,7 +34,10 @@ printName(`Cameron`)
 */
 
 //CODE HERE
-
+function greeting(name){
+  console.log(`Hello, ` + name);
+}
+greeting(`Jake`)
 
 ////////////////// PROBLEM 4 ////////////////////
 /*
@@ -44,7 +47,13 @@ printName(`Cameron`)
 */
 
 //CODE HERE
+let sum = (add(41,81))
 
+function add(num1, num2) {
+  return num1 + num2
+}
+
+console.log(sum)
 
 ////////////////// PROBLEM 5 ////////////////////
 /*
