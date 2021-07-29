@@ -47,12 +47,12 @@ greeting(`Jake`)
 */
 
 //CODE HERE
-let sum = (add(41,81))
 
 function add(num1, num2) {
   return num1 + num2
 }
 
+let sum = (add(41,81))
 console.log(sum)
 
 ////////////////// PROBLEM 5 ////////////////////
@@ -65,7 +65,6 @@ console.log(sum)
 */
 
 //CODE HERE
-let nameGreeting = nameCheck(`Steven`)
 
 function nameCheck(name1) {
   if(name1 === `Steven`) {
@@ -76,6 +75,7 @@ function nameCheck(name1) {
     return (`Cool name, ${name1}`);
   }
 }
+let nameGreeting = nameCheck(`Steven`)
 
 console.log(nameGreeting)
 
@@ -93,16 +93,18 @@ console.log(nameGreeting)
 
 function faveColorFinder(color){
   if(color === `red`){
-    console.log(`red is a great color`)
+    return `red is a great color`
   } else if ( color === `green`){
-    console.log(`green is a solid favorite color`)
+    return `green is a solid favorite color`
   } else if (color === `black`) {
-    console.log(`so trendy`)
+    return `so trendy`
   } else {
-    console.log(`you need to evaluate your favorite color choice`)
+    return `you need to evaluate your favorite color choice`
   }
 }
-faveColorFinder(`green`);
+
+let colorRating = faveColorFinder(`green`)
+console.log(colorRating)
 
 ////////////////// PROBLEM 7 ////////////////////
 let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
@@ -114,12 +116,12 @@ let namesArr = ['Cameron', 'Riley', 'Eric', 'Brenna', 'Karl']
 
 //CODE HERE
 
-function printAllNames(){
-  for(let i = 0; i < namesArr.length; i++){
-    console.log(namesArr[i])
+function printAllNames(names){
+  for(let i = 0; i < names.length; i++){
+    console.log(names[i])
   }
 }
-printAllNames();
+printAllNames(namesArr);
 ////////////////// PROBLEM 8 ////////////////////
 /*
   Create a function called thatsOdd that takes in a single argument (a number).
@@ -180,9 +182,16 @@ let loser = 'Glimmer'
 */
 
 //CODE HERE
-function theEliminator(contestants, losers){
-
+function theEliminator(player, remove) {
+  for (let i = 0; i < player.length; i++) {
+    if (player[i] === remove) {
+      player.splice(i, 1);
+    }
+  }
+  return player;
 }
+
+console.log(theEliminator(contestants, loser));
 
 ////////////////// PROBLEM 11 ////////////////////
 let sampleString = "Hi, my name is Kylo."
@@ -191,16 +200,26 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function transform(string){
 
-
+  console.log(string.toUpperCase());
+}
+transform(sampleString)
 ////////////////// PROBLEM 12 ////////////////////
 /*
-  Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
+  Write a function, naming it whatever you believe to be appropriate, that buys as many chocolate frogs as possible with a certain amount of gold. Each chocolate frog costs 3 gold. 
+  Your function should take in a single parameter, which is the amount of gold you are willing to spend. Your function should return a total amount of chocolate frogs you were able to purchase.
   Create a variable called `totalFrogs` and set it equal to your function invoked, passing in the amount of gold you are willing to spend.
 */
 
 //CODE HERE
+function frogs(gold) {
+  gold = gold / 3;
+  return gold;
+}
 
+let totalFrogs = frogs(115);
+console.log(totalFrogs);
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -208,15 +227,50 @@ let sampleString = "Hi, my name is Kylo."
 */
 
 //CODE HERE
+function frogs2(gold) {
+  gold = Math.floor(gold / 3);
+  return gold;
+}
 
+let totalFrogs2 = frogs2(115)
+console.log(totalFrogs2)
 
 ////////////////// PROBLEM 14 ////////////////////
 let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 /*
-  Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. Use the sample array to test this function.
+  Write a function that takes in an array of numbers as an argument. In the body of the function, write logic to determine if the array is in ascending order. 
+  The function should return true, if it is sorted in ascending order, false if it is not. Create a variable, `arrayIsAscending` and set it equal to your function invoked. 
+  Use the sample array to test this function.
 */
 
 //CODE HERE
+function arrayOrder(arr) {
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] > arr[i + 1]){
+      return false;
+    } else {
+      return true;
+    }
+  }
+};
+let checkAscending = arrayOrder(sampleArray);
+console.log(checkAscending);
+
+
+function checkArrayAscending(arr) {
+  let comparisonValue = arr[0];
+  for (let i = 1; i < arr.length - 1; i++) {
+    if (arr[i] <= comparisonValue) {
+      return false;
+    } else {
+      comparisonValue = arr[i];
+    }
+  }
+  return true;
+}
+
+let arrayIsAscending = checkArrayAscending(sampleArray);
+console.log(arrayIsAscending)
 
 
 ////////////////// PROBLEM 15 ////////////////////
@@ -241,13 +295,13 @@ function pond() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = []
+let globalScope = ["duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathroom function.
-let bathroomScope = []
+let bathroomScope = ["rubberDuck", "duck"]
 
 //This array should contain the variable names (as strings) accessible in the bathtub function.
-let bathtubScope = []
+let bathtubScope = ["rubberDuck", "sailorDuck", "duck"]
 
 //This array should contain the variable names (as strings) accessible in the pond function.
-let pondScope = []
+let pondScope = ["duck", "realDuck"]
