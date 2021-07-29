@@ -132,15 +132,16 @@ printAllNames(namesArr);
 
 //CODE HERE
 
-let oddChecker = thatsOdd(54)
 
 function thatsOdd(num){
-if(num % 2 === 0) {
-  console.log(`That's not odd!`)
-} else {
-  console.log(`That is odd indeed!`)
+  if(num % 2 === 0) {
+    console.log(`That's not odd!`)
+  } else {
+    console.log(`That is odd indeed!`)
+  }
 }
-}
+
+let oddChecker = thatsOdd(51)
 
 ////////////////// PROBLEM 9 ////////////////////
 let bigOrSmallArray = [1,101, 102, 2, 103, 4, 5, 6, 107]
@@ -160,8 +161,8 @@ let arrayEvaluator2 = bigOrSmall(bigOrSmallArray2)
 
 function bigOrSmall(arr){
   let answers = []
-  for(let i = 0; i < bigOrSmallArray.length; i++) {
-    if(bigOrSmallArray[i] > 100){
+  for(let i = 0; i < arr.length; i++) {
+    if(arr[i] > 100){
       answers.push('big')
     } else {
       answers.push('small')
@@ -218,8 +219,8 @@ function frogs(gold) {
   return gold;
 }
 
-let totalFrogs = frogs(115);
-console.log(totalFrogs);
+let totalFrogs = frogs(115)
+console.log(totalFrogs)
 
 ////////////////// PROBLEM 13 ////////////////////
 /*
@@ -256,7 +257,7 @@ function arrayOrder(arr) {
 let checkAscending = arrayOrder(sampleArray);
 console.log(checkAscending);
 
-
+//This is the answer from the solution file and it doesn't seem to work either
 function checkArrayAscending(arr) {
   let comparisonValue = arr[0];
   for (let i = 1; i < arr.length - 1; i++) {
