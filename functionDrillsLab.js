@@ -246,7 +246,7 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
 //CODE HERE
 function arrayOrder(arr) {
-  for(let i = 0; i < arr.length; i++){
+  for(let i = 1; i < arr.length - 1; i++){
     if(arr[i] > arr[i + 1]){
       return false;
     } else {
@@ -257,21 +257,27 @@ function arrayOrder(arr) {
 let checkAscending = arrayOrder(sampleArray);
 console.log(checkAscending);
 
-//This is the answer from the solution file and it doesn't seem to work either
-function checkArrayAscending(arr) {
-  let comparisonValue = arr[0];
-  for (let i = 1; i < arr.length - 1; i++) {
-    if (arr[i] <= comparisonValue) {
-      return false;
-    } else {
-      comparisonValue = arr[i];
-    }
-  }
-  return true;
-}
+///////////////////////QUESTION????????????///////////////////
+// ON problem 14 I got it working but I don't know why it works 
+// for(let i = 0; i < arr.length; i++) this is what I had that didn't work.
+// I'm not sure why changing to this for(let i = 1; i < arr.length - 1; i++) makes it work
+//////////////////////////////////////////////////////////
 
-let arrayIsAscending = checkArrayAscending(sampleArray);
-console.log(arrayIsAscending)
+// This is the answer from the solution file and it doesn't seem to work either
+// function checkArrayAscending(arr) {
+//   let comparisonValue = arr[0];
+//   for (let i = 1; i < arr.length - 1; i++) {
+//     if (arr[i] <= comparisonValue) {
+//       return false;
+//     } else {
+//       comparisonValue = arr[i];
+//     }
+//   }
+//   return true;
+// }
+
+// let arrayIsAscending = checkArrayAscending(sampleArray);
+// console.log(arrayIsAscending)
 
 
 ////////////////// PROBLEM 15 ////////////////////
