@@ -246,13 +246,12 @@ let sampleArray = [0,1,2,3,4,7,5,6,8,9]
 
 //CODE HERE
 function arrayOrder(arr) {
-  for(let i = 1; i < arr.length - 1; i++){
+  for(let i = 0; i < arr.length; i++){
     if(arr[i] > arr[i + 1]){
       return false;
-    } else {
-      return true;
     }
   }
+  return true;
 };
 let checkAscending = arrayOrder(sampleArray);
 console.log(checkAscending);
